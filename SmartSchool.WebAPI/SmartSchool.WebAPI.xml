@@ -14,6 +14,16 @@
             Método resposável por trazer todos os alunos.
             </summary>
         </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.GetById(System.Int32)">
+            <summary>
+            Método resposável por trazer um aluno pelo ID.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.Post(SmartSchool.WebAPI.V1.Dtos.AlunoRegisterDto)">
+            <summary>
+            Método resposável por cadastrar o aluno.
+            </summary>
+        </member>
         <member name="T:SmartSchool.WebAPI.V1.Controllers.ProfessorController">
             <summary>
             Versão 1.0 da API de Professores
@@ -27,6 +37,16 @@
         <member name="M:SmartSchool.WebAPI.V2.Controllers.AlunoController.Get">
             <summary>
             Método resposável por trazer todos os alunos.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V2.Controllers.AlunoController.GetById(System.Int32)">
+            <summary>
+            Método resposável por trazer um aluno pelo ID.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V2.Controllers.AlunoController.Post(SmartSchool.WebAPI.V2.Dtos.AlunoRegisterDto)">
+            <summary>
+            Método resposável por cadastrar o aluno.
             </summary>
         </member>
     </members>

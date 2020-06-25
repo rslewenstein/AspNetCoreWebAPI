@@ -36,6 +36,9 @@ namespace SmartSchool.WebAPI.V1.Controllers
             return Ok(_mapper.Map<IEnumerable<AlunoDto>>(alunos));
         }
 
+        /// <summary>
+        /// Método resposável por trazer um aluno pelo ID.
+        /// </summary>
         //api/aluno/2
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -48,6 +51,9 @@ namespace SmartSchool.WebAPI.V1.Controllers
             return Ok(alunoDto);
         }
 
+        /// <summary>
+        /// Método resposável por cadastrar o aluno.
+        /// </summary>
         [HttpPost]
         public IActionResult Post(AlunoRegisterDto model)
         {
