@@ -11,22 +11,67 @@
         </member>
         <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.Get">
             <summary>
-            Método resposável por trazer todos os alunos.
+            Método responsável por trazer todos os alunos.
             </summary>
         </member>
         <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.GetById(System.Int32)">
             <summary>
-            Método resposável por trazer um aluno pelo ID.
+            Método responsável por trazer um aluno pelo ID.
             </summary>
         </member>
         <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.Post(SmartSchool.WebAPI.V1.Dtos.AlunoRegisterDto)">
             <summary>
-            Método resposável por cadastrar o aluno.
+            Método responsável por cadastrar o aluno.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.Put(System.Int32,SmartSchool.WebAPI.V1.Dtos.AlunoRegisterDto)">
+            <summary>
+            Método responsável por atualizar o aluno.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.Patch(System.Int32,SmartSchool.WebAPI.V1.Dtos.AlunoRegisterDto)">
+            <summary>
+            Método responsável por atualizar o aluno.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.AlunoController.Delete(System.Int32)">
+            <summary>
+            Método responsável por deletar o aluno.
             </summary>
         </member>
         <member name="T:SmartSchool.WebAPI.V1.Controllers.ProfessorController">
             <summary>
             Versão 1.0 da API de Professores
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.ProfessorController.Get">
+            <summary>
+            Método responsável por pegar todos os professores.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.ProfessorController.GetById(System.Int32)">
+            <summary>
+            Método responsável por pegar o professor pelo ID.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.ProfessorController.Post(SmartSchool.WebAPI.V1.Dtos.ProfessorRegisterDto)">
+            <summary>
+            Método responsável por Cadastrar o professor.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.ProfessorController.Put(System.Int32,SmartSchool.WebAPI.V1.Dtos.ProfessorRegisterDto)">
+            <summary>
+            Método responsável por atualizar o professor.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.ProfessorController.Patch(System.Int32,SmartSchool.WebAPI.V1.Dtos.ProfessorRegisterDto)">
+            <summary>
+            Método responsável por atualizar o professor.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V1.Controllers.ProfessorController.Delete(System.Int32)">
+            <summary>
+            Método responsável por deletar o professor.
             </summary>
         </member>
         <member name="T:SmartSchool.WebAPI.V2.Controllers.AlunoController">
@@ -47,6 +92,16 @@
         <member name="M:SmartSchool.WebAPI.V2.Controllers.AlunoController.Post(SmartSchool.WebAPI.V2.Dtos.AlunoRegisterDto)">
             <summary>
             Método resposável por cadastrar o aluno.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V2.Controllers.AlunoController.Put(System.Int32,SmartSchool.WebAPI.V2.Dtos.AlunoRegisterDto)">
+            <summary>
+            Método responsável por atualizar o aluno.
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.V2.Controllers.AlunoController.Delete(System.Int32)">
+            <summary>
+            Método responsável por deletar o aluno.
             </summary>
         </member>
     </members>

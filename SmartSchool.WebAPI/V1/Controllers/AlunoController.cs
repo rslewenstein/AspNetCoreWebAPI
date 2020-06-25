@@ -26,7 +26,7 @@ namespace SmartSchool.WebAPI.V1.Controllers
         }
 
         /// <summary>
-        /// Método resposável por trazer todos os alunos.
+        /// Método responsável por trazer todos os alunos.
         /// </summary>
         [HttpGet]
         public IActionResult Get()
@@ -37,7 +37,7 @@ namespace SmartSchool.WebAPI.V1.Controllers
         }
 
         /// <summary>
-        /// Método resposável por trazer um aluno pelo ID.
+        /// Método responsável por trazer um aluno pelo ID.
         /// </summary>
         //api/aluno/2
         [HttpGet("{id}")]
@@ -52,7 +52,7 @@ namespace SmartSchool.WebAPI.V1.Controllers
         }
 
         /// <summary>
-        /// Método resposável por cadastrar o aluno.
+        /// Método responsável por cadastrar o aluno.
         /// </summary>
         [HttpPost]
         public IActionResult Post(AlunoRegisterDto model)
@@ -68,6 +68,9 @@ namespace SmartSchool.WebAPI.V1.Controllers
             return BadRequest("Aluno não encontrado");
         }
 
+        /// <summary>
+        /// Método responsável por atualizar o aluno.
+        /// </summary>
         [HttpPut("{id}")]
         public IActionResult Put(int id, AlunoRegisterDto model)
         {
@@ -85,6 +88,9 @@ namespace SmartSchool.WebAPI.V1.Controllers
             return BadRequest("Aluno não atualizado.");
         }
 
+        /// <summary>
+        /// Método responsável por atualizar o aluno.
+        /// </summary>
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, AlunoRegisterDto model)
         {
@@ -102,6 +108,9 @@ namespace SmartSchool.WebAPI.V1.Controllers
             return BadRequest("Aluno não atualizado.");
         }
 
+        /// <summary>
+        /// Método responsável por deletar o aluno.
+        /// </summary>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

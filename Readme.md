@@ -2,5 +2,4 @@
 
 ### Criando Web API com ASP.NET Core 3.1
 
-### Foi utilizado:
-#### Mapper, Repository, Swagger.
+#### API criada como fonte de estudo.

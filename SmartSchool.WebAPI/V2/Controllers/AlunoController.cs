@@ -68,6 +68,9 @@ namespace SmartSchool.WebAPI.V2.Controllers
             return BadRequest("Aluno não encontrado");
         }
 
+        /// <summary>
+        /// Método responsável por atualizar o aluno.
+        /// </summary>
         [HttpPut("{id}")]
         public IActionResult Put(int id, AlunoRegisterDto model)
         {
@@ -85,6 +88,9 @@ namespace SmartSchool.WebAPI.V2.Controllers
             return BadRequest("Aluno não atualizado.");
         }
 
+        /// <summary>
+        /// Método responsável por deletar o aluno.
+        /// </summary>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
