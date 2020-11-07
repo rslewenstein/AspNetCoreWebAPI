@@ -9,44 +9,45 @@ using SmartSchool.WebAPI.Data;
 namespace SmartSchool.WebAPI.Migrations
 {
     [DbContext(typeof(SmartContext))]
-    [Migration("20200624000329_Init")]
-    partial class Init
+    [Migration("20201107153258_initMysql")]
+    partial class initMysql
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.0");
+                .HasAnnotation("ProductVersion", "3.1.0")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("SmartSchool.WebAPI.Models.Aluno", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<bool>("Ativo")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("DataFim")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DataInicio")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DataNasc")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("Matricula")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Sobrenome")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Telefone")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
@@ -57,8 +58,8 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 1,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 707, DateTimeKind.Local).AddTicks(8923),
-                            DataNasc = new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(3100),
+                            DataNasc = new DateTime(2005, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Matricula = 1,
                             Nome = "Marta",
                             Sobrenome = "Kent",
@@ -68,8 +69,8 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 2,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(1371),
-                            DataNasc = new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(5427),
+                            DataNasc = new DateTime(2005, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Matricula = 2,
                             Nome = "Paula",
                             Sobrenome = "Isabela",
@@ -79,8 +80,8 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 3,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(1456),
-                            DataNasc = new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(5514),
+                            DataNasc = new DateTime(2005, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Matricula = 3,
                             Nome = "Laura",
                             Sobrenome = "Antonia",
@@ -90,8 +91,8 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 4,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(1467),
-                            DataNasc = new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(5524),
+                            DataNasc = new DateTime(2005, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Matricula = 4,
                             Nome = "Luiza",
                             Sobrenome = "Maria",
@@ -101,8 +102,8 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 5,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(1476),
-                            DataNasc = new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(5533),
+                            DataNasc = new DateTime(2005, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Matricula = 5,
                             Nome = "Lucas",
                             Sobrenome = "Machado",
@@ -112,8 +113,8 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 6,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(1492),
-                            DataNasc = new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(5546),
+                            DataNasc = new DateTime(2005, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Matricula = 6,
                             Nome = "Pedro",
                             Sobrenome = "Alvares",
@@ -123,8 +124,8 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 7,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(1500),
-                            DataNasc = new DateTime(2005, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(5554),
+                            DataNasc = new DateTime(2005, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Matricula = 7,
                             Nome = "Paulo",
                             Sobrenome = "José",
@@ -135,19 +136,19 @@ namespace SmartSchool.WebAPI.Migrations
             modelBuilder.Entity("SmartSchool.WebAPI.Models.AlunoCurso", b =>
                 {
                     b.Property<int>("AlunoId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("CursoId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DataFim")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DataInicio")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int?>("Nota")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.HasKey("AlunoId", "CursoId");
 
@@ -159,19 +160,19 @@ namespace SmartSchool.WebAPI.Migrations
             modelBuilder.Entity("SmartSchool.WebAPI.Models.AlunoDisciplina", b =>
                 {
                     b.Property<int>("AlunoId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("DisciplinaId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DataFim")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DataInicio")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int?>("Nota")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.HasKey("AlunoId", "DisciplinaId");
 
@@ -184,139 +185,139 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             AlunoId = 1,
                             DisciplinaId = 2,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(3201)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(7494)
                         },
                         new
                         {
                             AlunoId = 1,
                             DisciplinaId = 4,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(3951)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8237)
                         },
                         new
                         {
                             AlunoId = 1,
                             DisciplinaId = 5,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(3994)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8281)
                         },
                         new
                         {
                             AlunoId = 2,
                             DisciplinaId = 1,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(3998)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8284)
                         },
                         new
                         {
                             AlunoId = 2,
                             DisciplinaId = 2,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4001)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8287)
                         },
                         new
                         {
                             AlunoId = 2,
                             DisciplinaId = 5,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4009)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8296)
                         },
                         new
                         {
                             AlunoId = 3,
                             DisciplinaId = 1,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4011)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8299)
                         },
                         new
                         {
                             AlunoId = 3,
                             DisciplinaId = 2,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4014)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8302)
                         },
                         new
                         {
                             AlunoId = 3,
                             DisciplinaId = 3,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4017)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8304)
                         },
                         new
                         {
                             AlunoId = 4,
                             DisciplinaId = 1,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4022)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8309)
                         },
                         new
                         {
                             AlunoId = 4,
                             DisciplinaId = 4,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4024)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8312)
                         },
                         new
                         {
                             AlunoId = 4,
                             DisciplinaId = 5,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4027)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8314)
                         },
                         new
                         {
                             AlunoId = 5,
                             DisciplinaId = 4,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4030)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8317)
                         },
                         new
                         {
                             AlunoId = 5,
                             DisciplinaId = 5,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4032)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8319)
                         },
                         new
                         {
                             AlunoId = 6,
                             DisciplinaId = 1,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4035)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8322)
                         },
                         new
                         {
                             AlunoId = 6,
                             DisciplinaId = 2,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4037)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8324)
                         },
                         new
                         {
                             AlunoId = 6,
                             DisciplinaId = 3,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4040)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8327)
                         },
                         new
                         {
                             AlunoId = 6,
                             DisciplinaId = 4,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4044)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8332)
                         },
                         new
                         {
                             AlunoId = 7,
                             DisciplinaId = 1,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4046)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8335)
                         },
                         new
                         {
                             AlunoId = 7,
                             DisciplinaId = 2,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4049)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8337)
                         },
                         new
                         {
                             AlunoId = 7,
                             DisciplinaId = 3,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4052)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8340)
                         },
                         new
                         {
                             AlunoId = 7,
                             DisciplinaId = 4,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4054)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8342)
                         },
                         new
                         {
                             AlunoId = 7,
                             DisciplinaId = 5,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 708, DateTimeKind.Local).AddTicks(4057)
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 891, DateTimeKind.Local).AddTicks(8345)
                         });
                 });
 
@@ -324,10 +325,10 @@ namespace SmartSchool.WebAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
@@ -355,22 +356,22 @@ namespace SmartSchool.WebAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("CargaHoraria")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("CursoId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int?>("PrerequisitoId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("ProfessorId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -469,28 +470,28 @@ namespace SmartSchool.WebAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<bool>("Ativo")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("DataFim")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DataInicio")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("Registro")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("Sobrenome")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Telefone")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
@@ -501,7 +502,7 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 1,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 696, DateTimeKind.Local).AddTicks(7747),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 884, DateTimeKind.Local).AddTicks(362),
                             Nome = "Lauro",
                             Registro = 1,
                             Sobrenome = "Oliveira"
@@ -510,7 +511,7 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 2,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 701, DateTimeKind.Local).AddTicks(8044),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 888, DateTimeKind.Local).AddTicks(4158),
                             Nome = "Roberto",
                             Registro = 2,
                             Sobrenome = "Soares"
@@ -519,7 +520,7 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 3,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 701, DateTimeKind.Local).AddTicks(8116),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 888, DateTimeKind.Local).AddTicks(4235),
                             Nome = "Ronaldo",
                             Registro = 3,
                             Sobrenome = "Marconi"
@@ -528,7 +529,7 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 4,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 701, DateTimeKind.Local).AddTicks(8122),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 888, DateTimeKind.Local).AddTicks(4240),
                             Nome = "Rodrigo",
                             Registro = 4,
                             Sobrenome = "Carvalho"
@@ -537,7 +538,7 @@ namespace SmartSchool.WebAPI.Migrations
                         {
                             Id = 5,
                             Ativo = true,
-                            DataInicio = new DateTime(2020, 6, 23, 21, 3, 28, 701, DateTimeKind.Local).AddTicks(8125),
+                            DataInicio = new DateTime(2020, 11, 7, 12, 32, 57, 888, DateTimeKind.Local).AddTicks(4243),
                             Nome = "Alexandre",
                             Registro = 5,
                             Sobrenome = "Montanha"
