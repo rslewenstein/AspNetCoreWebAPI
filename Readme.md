@@ -1,5 +1,16 @@
-## Udemy Course
+## WebApi .Net Core 3.1
 
-### Criando Web API com ASP.NET Core 3.1
+#### Tecnologies:
 
-#### API criada como fonte de estudo.
+- .Net Core
+- EntityFramework Core
+- Pomelo
+- Docker (Docker Compose, Network)
+
+#### Details:
+
+- Versions of the API
+- DTO
+- AutoMapper
+- Tasks, Paginations and Filters
+- Swagger
